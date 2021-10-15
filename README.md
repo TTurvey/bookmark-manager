@@ -14,10 +14,15 @@ Domain model diagram
 Setup
 ---------------
 Anyone needing to setup the database from scratch will need to do the following things:
-1. Connect to 'psql'
-2. Create the database using the psql command 'CREATE DATABASE bookmark_manager;'
-3. Connect to the database using the pqsl command '\c bookmark_manager;'
-4. Run the SQL queries we have saved in the file '01_create_bookmarks_table.sql' within the ./db/migrations folder.
+1. Connect to 'psql timturvey'
+2. Create the database `bookmark_manager` and `bookmark_manager_test` databases using the psql commands:
+   'CREATE DATABASE bookmark_manager;'
+   'CREATE DATABASE bookmark_manager_test'
+3. The table was created by 'CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, url VARCHAR(60));'
+4. Connect to the database using the pqsl command '\c bookmark_manager;'
+5. To set up the appropriate tables, connect to each database in `psql` and run the SQL scripts in the `db/migrations` folder in the given order
+
+
 
 To run the Bookmark Manager app:
 ---------------
